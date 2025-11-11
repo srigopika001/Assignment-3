@@ -1,0 +1,51 @@
+import java.util.Scanner;
+class Calculator {
+public int add(int a, int b) {
+    return a + b;
+}
+public double add(double a, double b) {
+    return a + b;
+}
+public int add(int a, int b, int c) {
+    return a + b + c;
+}
+}
+public class CalculatorScanner {
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    Calculator calc = new Calculator();
+    System.out.println("Choose operation:");
+    System.out.println("1. Add two integers");
+    System.out.println("2. Add two doubles");
+    System.out.println("3. Add three integers");
+    int choice = sc.nextInt();
+   switch (choice) {
+        case 1:
+          System.out.print("Enter first integer: ");
+            int i1 = sc.nextInt();
+            System.out.print("Enter second integer: ");
+            int i2 = sc.nextInt();
+            System.out.println("Result: " + calc.add(i1, i2));
+            break;
+        case 2:
+            System.out.print("Enter first double: ");
+            double d1 = sc.nextDouble();
+            System.out.print("Enter second double: ");
+            double d2 = sc.nextDouble();
+            System.out.println("Result: " + calc.add(d1, d2));
+            break;
+        case 3:
+            System.out.print("Enter first integer: ");
+            int a = sc.nextInt();
+            System.out.print("Enter second integer: ");
+            int b = sc.nextInt();
+            System.out.print("Enter third integer: ");
+            int c = sc.nextInt();
+            System.out.println("Result: " + calc.add(a, b, c));
+            break;
+        default:
+            System.out.println("Invalid choice!");
+    }
+    sc.close();
+}
+}
